@@ -1,19 +1,14 @@
+# these 2 needs to be required first
+require "active_support"
+require "action_view"
      
 require 'sinatra'
-require 'sinatra/reloader'
 require 'cloudinary' # for upload method
 require 'pry'
 
 # optional requires for the cl_image_tag method
-require "active_support"
-require "action_view"
 include CloudinaryHelper
 
-# environment variables
-# ENV gives you your environment variables - and its a hash
-# ENV = {
-#   "API_KEY" => "wewoeiruweirueoru"
-# }
 
 config = {
   cloud_name: "sei",
