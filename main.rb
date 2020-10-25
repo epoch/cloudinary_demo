@@ -21,6 +21,7 @@ get '/' do
 end
 
 post '/sign_up' do
+  # wrapper method that makes an API request to upload image to the cloud (aws s3)
   result = Cloudinary::Uploader.upload(params["avatar"]["tempfile"], config)
 
   "image uploaded - check your cloudinary account - use the cl_image_tag method to show images"
